@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://be8sovo08uwwv"]
+
+[ext_resource type="PackedScene" uid="uid://ddnowpjjakvta" path="res://content/gpe/entities/enemies/base_enemy.tscn" id="1_3000o"]
+[ext_resource type="Texture2D" uid="uid://skjg6jig6hk8" path="res://assets/art/enemies/pidgeon/pigeon_pixel.png" id="2_n1hwy"]
+[ext_resource type="Script" uid="uid://d1nqbtjyksqpd" path="res://content/gpe/entities/enemies/pidgeon/pidgeon.gd" id="2_p2lg1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1hwy"]
+radius = 5.15919
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p2lg1"]
+radius = 3.25865
+
+[node name="Pidgeon" instance=ExtResource("1_3000o")]
+script = ExtResource("2_p2lg1")
+move_speed = 75.0
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0.542332, -3.54148)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_n1hwy")
+
+[node name="HitboxComponent" parent="." index="1"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
+position = Vector2(0.0664005, -3.60225)
+shape = SubResource("CircleShape2D_n1hwy")
+
+[node name="HurtboxComponent" parent="." index="2"]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" index="0"]
+position = Vector2(0.0664005, -3.58565)
+shape = SubResource("CircleShape2D_p2lg1")
+debug_color = Color(0.930113, 0.239175, 0.29524, 0.42)
+
+[connection signal="hit_hitbox" from="HurtboxComponent" to="." method="_on_hurtbox_component_hit_hitbox"]

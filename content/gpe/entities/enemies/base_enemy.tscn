@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddnowpjjakvta"]
+
+[ext_resource type="Script" uid="uid://cufurdgyqcf1e" path="res://content/components/hitbox_component.gd" id="1_1nvj1"]
+[ext_resource type="Script" uid="uid://c2g02nvq4lv6c" path="res://content/gpe/entities/enemies/base_enemy.gd" id="1_2dv4c"]
+[ext_resource type="Script" uid="uid://dmnejlvrmnpmp" path="res://content/components/hurtbox_component.gd" id="2_2dv4c"]
+
+[node name="BaseEnemy" type="Node2D" groups=["enemy"]]
+script = ExtResource("1_2dv4c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="HitboxComponent" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_1nvj1")
+metadata/_custom_type_script = "uid://cufurdgyqcf1e"
+
+[node name="HurtboxComponent" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_2dv4c")
+metadata/_custom_type_script = "uid://dmnejlvrmnpmp"
