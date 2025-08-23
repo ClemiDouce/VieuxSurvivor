@@ -10,6 +10,8 @@ radius = 5.0
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_b0mm0")
+fly_speed = null
+xp_value = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.046875, 0.046875)

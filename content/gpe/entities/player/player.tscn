@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dyrsi3fno6mu0" path="res://content/gpe/entities/player/player.gd" id="1_eyaqe"]
 [ext_resource type="Texture2D" uid="uid://dxxrrfkcrg25o" path="res://assets/art/character/player_run_sheet.png" id="1_q8sxf"]
 [ext_resource type="Texture2D" uid="uid://dfj6f0ltyk68o" path="res://assets/art/character/player_walk_sheet.png" id="2_fi777"]
-[ext_resource type="Script" uid="uid://cufurdgyqcf1e" path="res://content/components/hitbox_component.gd" id="5_lkpxn"]
+[ext_resource type="Script" path="res://content/components/hitbox_component.gd" id="5_lkpxn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6l6f"]
 atlas = ExtResource("1_cvfis")

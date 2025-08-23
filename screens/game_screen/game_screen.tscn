@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxfc42kgx683p"]
+[gd_scene load_steps=6 format=3 uid="uid://b6x7lwkvaifro"]
 
 [ext_resource type="PackedScene" uid="uid://csakpij1xapl5" path="res://content/gpe/entities/player/player.tscn" id="1_uvvtr"]
 [ext_resource type="PackedScene" uid="uid://4n7ww208tmlk" path="res://content/gpe/collectable/xp_shard/xp_shard.tscn" id="2_imf7j"]
@@ -41,3 +41,5 @@ shape = SubResource("WorldBoundaryShape2D_l5ook")
 
 [node name="XpShard" parent="." instance=ExtResource("2_imf7j")]
 position = Vector2(93, 61)
+fly_speed = null
+xp_value = null

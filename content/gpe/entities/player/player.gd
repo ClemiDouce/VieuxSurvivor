@@ -31,7 +31,9 @@ func _on_hitbox_component_hit(hurtbox: HurtboxComponent) -> void:
 func die():
 	get_tree().reload_current_scene.call_deferred()
 
+func gain_xp(xp_gain:float):
+	printt("i gained "+ str(xp_gain) + " xp")
 
 func _on_collectable_area_area_entered(area: Area2D) -> void:
 	if area is XpShard:
-		area.queue_free.call_deferred()
+		area.player = self
