@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxfc42kgx683p"]
+
+[ext_resource type="PackedScene" uid="uid://csakpij1xapl5" path="res://content/gpe/entities/player/player.tscn" id="1_uvvtr"]
+[ext_resource type="PackedScene" uid="uid://4n7ww208tmlk" path="res://content/gpe/collectable/xp_shard/xp_shard.tscn" id="2_imf7j"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_imf7j"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3qqxb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l5ook"]
+
+[node name="GameScreen" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_uvvtr")]
+position = Vector2(156, 16)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Walls" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-1, 88)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_imf7j")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(321, 79)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_imf7j")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(156, 14)
+rotation = -3.14159
+shape = SubResource("WorldBoundaryShape2D_3qqxb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(158, 176)
+rotation = -6.28319
+shape = SubResource("WorldBoundaryShape2D_l5ook")
+
+[node name="XpShard" parent="." instance=ExtResource("2_imf7j")]
+position = Vector2(93, 61)
