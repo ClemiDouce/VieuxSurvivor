@@ -1,15 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://pch8njs2pf6a"]
+[gd_scene load_steps=5 format=3 uid="uid://pch8njs2pf6a"]
 
 [ext_resource type="PackedScene" uid="uid://1ol5e7nquf20" path="res://content/gpe/entities/projectile/base_projectile.tscn" id="1_hnxat"]
+[ext_resource type="Script" uid="uid://djkbtmkm1nmc3" path="res://content/gpe/entities/projectile/potato/potato.gd" id="2_3m8cw"]
 [ext_resource type="Texture2D" uid="uid://dcxki1w51n8bb" path="res://icon.svg" id="2_dljiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3m8cw"]
 size = Vector2(4, 8)
 
 [node name="Potato" instance=ExtResource("1_hnxat")]
-
-[node name="HurtboxComponent" parent="." index="0"]
-collision_mask = 4
+script = ExtResource("2_3m8cw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" index="0"]
 position = Vector2(0, -4)

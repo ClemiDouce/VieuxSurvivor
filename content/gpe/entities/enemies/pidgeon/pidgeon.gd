@@ -20,4 +20,8 @@ func _on_hurtbox_component_hit_hitbox(hitbox: Variant) -> void:
 
 
 func _on_hitbox_component_hit(hurtbox: HurtboxComponent) -> void:
+	die()
+
+func die() -> void:
+	spawn_xp()
 	queue_free.call_deferred()
