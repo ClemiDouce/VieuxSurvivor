@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6x7lwkvaifro"]
+[gd_scene load_steps=7 format=3 uid="uid://b6x7lwkvaifro"]
 
 [ext_resource type="PackedScene" uid="uid://csakpij1xapl5" path="res://content/gpe/entities/player/player.tscn" id="1_uvvtr"]
 [ext_resource type="PackedScene" uid="uid://4n7ww208tmlk" path="res://content/gpe/collectable/xp_shard/xp_shard.tscn" id="2_imf7j"]
+[ext_resource type="PackedScene" uid="uid://be8sovo08uwwv" path="res://content/gpe/entities/enemies/pidgeon/pidgeon.tscn" id="3_3qqxb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_imf7j"]
 
@@ -12,7 +13,7 @@
 [node name="GameScreen" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_uvvtr")]
-position = Vector2(156, 16)
+position = Vector2(158, 129)
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -41,5 +42,21 @@ shape = SubResource("WorldBoundaryShape2D_l5ook")
 
 [node name="XpShard" parent="." instance=ExtResource("2_imf7j")]
 position = Vector2(93, 61)
-fly_speed = null
-xp_value = null
+
+[node name="Pidgeon" parent="." instance=ExtResource("3_3qqxb")]
+position = Vector2(203, 72)
+
+[node name="Pidgeon2" parent="." instance=ExtResource("3_3qqxb")]
+position = Vector2(242, 96)
+
+[node name="Pidgeon3" parent="." instance=ExtResource("3_3qqxb")]
+position = Vector2(95, 97)
+
+[node name="Pidgeon4" parent="." instance=ExtResource("3_3qqxb")]
+position = Vector2(125, 69)
+
+[node name="Pidgeon5" parent="." instance=ExtResource("3_3qqxb")]
+position = Vector2(62, 106)
+
+[node name="Pidgeon6" parent="." instance=ExtResource("3_3qqxb")]
+position = Vector2(189, 53)
