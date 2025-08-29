@@ -34,4 +34,5 @@ position = Vector2(0.0664005, -3.58565)
 shape = SubResource("CircleShape2D_p2lg1")
 debug_color = Color(0.930113, 0.239175, 0.29524, 0.42)
 
+[connection signal="hit" from="HitboxComponent" to="." method="_on_hitbox_component_hit"]
 [connection signal="hit_hitbox" from="HurtboxComponent" to="." method="_on_hurtbox_component_hit_hitbox"]

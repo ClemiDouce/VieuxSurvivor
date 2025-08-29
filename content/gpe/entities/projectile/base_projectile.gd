@@ -6,7 +6,7 @@ class_name BaseProjectile extends Node2D
 
 @onready var life_timer:Timer = $LifeTime
 
-var move_speed:float = 20
+var move_speed:float = 100
 
 func _ready() -> void:
 	life_timer.wait_time = lifetime
@@ -16,4 +16,8 @@ func _physics_process(delta: float) -> void:
 	translate(direction * move_speed * delta)
 
 func _on_life_time_timeout() -> void:
+	queue_free.call_deferred()
+
+
+func _on_hurtbox_component_hit_hitbox(hitbox: Variant) -> void:
 	queue_free.call_deferred()

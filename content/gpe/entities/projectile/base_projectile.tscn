@@ -7,8 +7,10 @@
 script = ExtResource("1_b2bbf")
 
 [node name="HurtboxComponent" type="Area2D" parent="."]
+collision_mask = 4
 script = ExtResource("2_xtvh0")
 
 [node name="LifeTime" type="Timer" parent="."]
 
+[connection signal="hit_hitbox" from="HurtboxComponent" to="." method="_on_hurtbox_component_hit_hitbox"]
 [connection signal="timeout" from="LifeTime" to="." method="_on_life_time_timeout"]

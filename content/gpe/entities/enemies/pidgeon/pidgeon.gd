@@ -17,3 +17,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_hurtbox_component_hit_hitbox(hitbox: Variant) -> void:
 	queue_free.call_deferred()
+
+
+func _on_hitbox_component_hit(hurtbox: HurtboxComponent) -> void:
+	queue_free.call_deferred()
