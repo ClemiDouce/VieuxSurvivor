@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddnowpjjakvta"]
 
-[ext_resource type="Script" path="res://content/components/hitbox_component.gd" id="1_1nvj1"]
+[ext_resource type="Script" uid="uid://cufurdgyqcf1e" path="res://content/components/hitbox_component.gd" id="1_1nvj1"]
 [ext_resource type="Script" uid="uid://c2g02nvq4lv6c" path="res://content/gpe/entities/enemies/base_enemy.gd" id="1_2dv4c"]
-[ext_resource type="Script" path="res://content/components/hurtbox_component.gd" id="2_2dv4c"]
-[ext_resource type="Script" path="res://content/components/spawner_component.gd" id="4_2dw70"]
+[ext_resource type="Script" uid="uid://dmnejlvrmnpmp" path="res://content/components/hurtbox_component.gd" id="2_2dv4c"]
+[ext_resource type="Script" uid="uid://b2ismo077q78a" path="res://content/components/spawner_component.gd" id="4_2dw70"]
 [ext_resource type="PackedScene" uid="uid://4n7ww208tmlk" path="res://content/gpe/collectable/xp_shard/xp_shard.tscn" id="5_4jrwa"]
 
 [node name="BaseEnemy" type="Node2D" groups=["enemy"]]

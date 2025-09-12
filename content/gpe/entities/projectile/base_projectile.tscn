@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://1ol5e7nquf20"]
 
 [ext_resource type="Script" uid="uid://ba2pmju0xteop" path="res://content/gpe/entities/projectile/base_projectile.gd" id="1_b2bbf"]
-[ext_resource type="Script" path="res://content/components/hurtbox_component.gd" id="2_xtvh0"]
+[ext_resource type="Script" uid="uid://dmnejlvrmnpmp" path="res://content/components/hurtbox_component.gd" id="2_xtvh0"]
 
-[node name="BaseProjectile" type="Node2D"]
+[node name="BaseProjectile" type="Node2D" node_paths=PackedStringArray("hurtbox")]
 script = ExtResource("1_b2bbf")
+hurtbox = NodePath("HurtboxComponent")
 
 [node name="HurtboxComponent" type="Area2D" parent="."]
 collision_mask = 4

@@ -7,8 +7,8 @@
 radius = 5.0
 
 [node name="XpShard" type="Area2D"]
-collision_layer = 8
-collision_mask = 0
+collision_layer = 0
+collision_mask = 8
 script = ExtResource("1_b0mm0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -17,3 +17,5 @@ texture = ExtResource("1_lkuhc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_e0yce")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

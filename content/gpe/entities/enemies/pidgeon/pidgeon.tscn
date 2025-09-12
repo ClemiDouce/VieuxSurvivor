@@ -19,15 +19,9 @@ position = Vector2(0.542332, -3.54148)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_n1hwy")
 
-[node name="HitboxComponent" parent="." index="1"]
-visible = false
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent" index="0"]
 position = Vector2(0.0664005, -3.60225)
 shape = SubResource("CircleShape2D_n1hwy")
-
-[node name="HurtboxComponent" parent="." index="2"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" index="0"]
 position = Vector2(0.0664005, -3.58565)

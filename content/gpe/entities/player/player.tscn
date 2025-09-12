@@ -1,11 +1,12 @@
-[gd_scene load_steps=25 format=3 uid="uid://csakpij1xapl5"]
+[gd_scene load_steps=26 format=3 uid="uid://csakpij1xapl5"]
 
 [ext_resource type="Texture2D" uid="uid://bf4vikrg1e0bp" path="res://assets/art/character/player_idle_sheet.png" id="1_cvfis"]
 [ext_resource type="Script" uid="uid://dyrsi3fno6mu0" path="res://content/gpe/entities/player/player.gd" id="1_eyaqe"]
 [ext_resource type="Texture2D" uid="uid://dxxrrfkcrg25o" path="res://assets/art/character/player_run_sheet.png" id="1_q8sxf"]
 [ext_resource type="Texture2D" uid="uid://dfj6f0ltyk68o" path="res://assets/art/character/player_walk_sheet.png" id="2_fi777"]
-[ext_resource type="Script" path="res://content/components/hitbox_component.gd" id="5_lkpxn"]
-[ext_resource type="Script" path="res://content/components/spawner_component.gd" id="6_i30y4"]
+[ext_resource type="Script" uid="uid://cufurdgyqcf1e" path="res://content/components/hitbox_component.gd" id="5_lkpxn"]
+[ext_resource type="Script" uid="uid://b2ismo077q78a" path="res://content/components/spawner_component.gd" id="6_i30y4"]
+[ext_resource type="PackedScene" uid="uid://pch8njs2pf6a" path="res://content/gpe/entities/projectile/potato/potato.tscn" id="7_wbn4h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o6l6f"]
 atlas = ExtResource("1_cvfis")
@@ -130,7 +131,7 @@ size = Vector2(8, 3)
 size = Vector2(8, 14)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lkpxn"]
-radius = 43.0
+radius = 79.0063
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
@@ -158,14 +159,14 @@ position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_i30y4")
 
 [node name="CollectableArea" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 8
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableArea"]
 shape = SubResource("CircleShape2D_lkpxn")
 
 [node name="ProjectileSpawner" type="Node2D" parent="."]
 script = ExtResource("6_i30y4")
+scene = ExtResource("7_wbn4h")
 
 [connection signal="hit" from="HitboxComponent" to="." method="_on_hitbox_component_hit"]
-[connection signal="area_entered" from="CollectableArea" to="." method="_on_collectable_area_area_entered"]

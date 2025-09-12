@@ -1,8 +1,11 @@
 class_name BaseProjectile extends Node2D
 
+@export var hurtbox: HurtboxComponent
+
 @export var lifetime:float = 10
 @export var cool_down:float = 1
 @export var direction:Vector2 = Vector2.UP
+
 
 @onready var life_timer:Timer = $LifeTime
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerStat" load_steps=2 format=3 uid="uid://pv8adexqfnku"]
+
+[ext_resource type="Script" uid="uid://bs0khqevcvtwq" path="res://content/data/player_stat/player_stat.gd" id="1_7oiof"]
+
+[resource]
+script = ExtResource("1_7oiof")
+max_life = 100
+money = 50
+speed = 100.0
+metadata/_custom_type_script = "uid://bs0khqevcvtwq"
