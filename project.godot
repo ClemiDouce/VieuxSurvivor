@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VieuxSurvivor"
-run/main_scene="uid://bxfc42kgx683p"
+run/main_scene="uid://b6x7lwkvaifro"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

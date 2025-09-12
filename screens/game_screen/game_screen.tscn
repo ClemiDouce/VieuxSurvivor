@@ -42,8 +42,6 @@ shape = SubResource("WorldBoundaryShape2D_l5ook")
 
 [node name="XpShard" parent="." instance=ExtResource("2_imf7j")]
 position = Vector2(93, 61)
-fly_speed = 20.0
-xp_value = 1.0
 
 [node name="Pidgeon" parent="." instance=ExtResource("3_3qqxb")]
 position = Vector2(203, 72)
